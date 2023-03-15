@@ -1,0 +1,26 @@
+CREATE TABLE GameSpot (id INTEGER PRIMARY KEY, game TEXT, price INTEGER, condition TEXT, platform TEXT);
+
+INSERT INTO GameSpot VALUES (1, "The Legend of Zelda: Ocarina of Time", 60, "Used", "Nintendo 64");
+INSERT INTO GameSpot VALUES (2, "Super Smash Bros. Ultimate", 40, "Used", "Nintendo Switch");
+INSERT INTO GameSpot VALUES (3, "Grand Theft Auto V", 70, "New", "Playstation 5");
+INSERT INTO GameSpot VALUES (4, "Call of Duty: Modern Warfare 2", 30, "Used", "Xbox One X");
+INSERT INTO GameSpot VALUES (5, "Red Dead Redemption 2", 45, "Used", "Playstation 4");
+INSERT INTO GameSpot VALUES (6, "KillZone: Shadowfall", 10, "Used", "Playstation 4");
+INSERT INTO GameSpot VALUES (7, "Skate 3", 15, "Used", "Playstation 3");
+INSERT INTO GameSpot VALUES (8, "Eldin Ring", 70, "New", "Playstation 5");
+INSERT INTO GameSpot VALUES (9, "FIFA 23", 70, "New", "Xbox One X");
+INSERT INTO GameSpot VALUES (10, "Luigi's Mansion", 80, "Used", "Nintendo Gamecube");
+INSERT INTO GameSpot VALUES (11, "Metroid Prime Remastered", 40, "New", "Nintendo Switch"); 
+INSERT INTO GameSpot VALUES (12, "Need for Speed Underground 2", 25, "Used", "Playstation 2");
+INSERT INTO GameSpot VALUES (13, "Guitar Hero III: Legends of Rock", 35, "Used", "Xbox 360");
+INSERT INTO GameSpot VALUES (14, "Forza Horizon 5", 50, "New", "Xbox One X");
+INSERT INTO GameSpot VALUES (15, "Pokemon Black", 30, "Used", "Nintendo DS");
+
+--display the database ordered by price.
+select * from GameSpot order by price;
+
+--average price of games played on Playstation 5 console
+SELECT AVG(price) "avg Playstation 5 game price"
+FROM GameSpot
+where platform="Playstation 5"; 
+
